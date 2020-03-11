@@ -37,6 +37,7 @@ class JSON {
 protected:
 	static int pos, inc;
 	static const char* input;
+	static JSONList instance;
 
 	static void parseValue(JSONList* item);
 	static JSONList* parseObject(bool isArray);

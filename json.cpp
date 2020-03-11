@@ -317,6 +317,7 @@ JSONList JSON::parse(const char* input) {
 	JSONList root;// = new JSONList();
 	root.type = 'o';
 	root.value = parseObject(false);
+	instance = root;
 	return root;
 }
 
@@ -328,3 +329,4 @@ char* JSON::getState() {
 int JSON::pos;
 int JSON::inc;
 const char* JSON::input = "";
+JSONList JSON::instance;
